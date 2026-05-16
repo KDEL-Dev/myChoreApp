@@ -1,0 +1,38 @@
+body
+{
+    margin: 0;
+    padding: 0;
+
+    width: 468px; /*Temp Width for phone */
+    min-height: 80px;
+
+    background-color: grey;
+    border: 1px solid black;
+}
+
+#topNavBar
+{
+    margin: 0 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#selectRoomCont
+{
+    margin: 10px 20px;
+    gap: 20px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+}
+
+#selectRoomCont button
+{
+    width: 100%;
+    height: 200px;
+
+    cursor: pointer;
+    box-shadow: -10px 10px;
+    
+}

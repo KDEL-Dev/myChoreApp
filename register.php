@@ -101,14 +101,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="assets/stylesheet/styles.css">
+    <link rel="stylesheet" href="assets/stylesheet/output.css">
 
     <title>Registration</title>
 </head>
-<body>
-    <button>
-        <a href="login.php">Return</a>
-    </button>
+<body class="bg-sky-300">
+    
     <!-- Error Message -->
     <?php
         if(isset($_SESSION['error'])): ?>
@@ -119,46 +117,69 @@
                 ?>  
             </div>
     <?php endif ?>
+    <section class="min-h-screen flex justify-center items-center flex-col ">
+        <div class="w-80 flex flex-col"> <!--Use this for aligning based on screen size -->
+            <button class="w-24 mb-3 bg-red-500 px-3 py-2 rounded cursor-pointer">
+                <a href="login.php">Return</a>
+            </button>
+            <h1 class="mb-10 text-white text-6xl">Chore Check</h1>
+            <form method="POST" action="register.php" id="registerationForm">
+                <div class="my-3 flex flex-col">
+                    <label for="name" class="text-white">Name:</label>
+                    <input 
+                        type="text" 
+                        name="name" 
+                        id="name" 
+                        placeholder="Albert" 
+                        required 
+                        class="px-3 py-2 bg-white border-gray-300 rounded"
+                        autofocus
+                    >
+                </div>
+                <div class="my-3 flex flex-col">
+                    <label for="email" class="text-white">Email:</label>
+                    <input 
+                    type="email" 
+                    name="email" 
+                    id="email" 
+                    placeholder="abc123@example.com" 
+                    class="px-3 py-2 bg-white border-gray-300 rounded"
+                    required>
+                </div>
+                <div class="my-3 flex flex-col">
+                    <label for="password" class="text-white">Password:</label>
+                    <input 
+                        type="password" 
+                        name="password" 
+                        minlength="6" 
+                        class="px-3 py-2 bg-white border-gray-300 rounded"
+                        required
+                    >
+                </div>
+                <div class="my-3 flex flex-col">
+                    <label for="confirmPassword" class="text-white">Confirm Password:</label>
+                    <input 
+                        type="password" 
+                        name="confirmPassword" 
+                        minlength="6" 
+                        class="px-3 py-2 bg-white border-gray-300 rounded"
+                        required
+                    >
+                </div>
+                <div>
+                    <p class=" text-red-500">Password must be atleast <span id="passwordMinNum" class="underline font-bold">6 characters</span> long</p>
+                </div>
 
-    <form method="POST" action="register.php" id="registerationForm">
-        <div>
-            <label for="name">Name:</label>
-            <input 
-                type="text" 
-                name="name" 
-                id="name" 
-                placeholder="Albert" 
-                required 
-                autofocus
-            >
-        </div>
-        <div>
-            <label for="email">Email:</label>
-            <input type="email" name="email" id="email" placeholder="abc123@example.com" required>
-        </div>
-        <div>
-            <label for="password">Password:</label>
-            <input 
-                type="password" 
-                name="password" 
-                minlength="6" 
-                required
-            >
-        </div>
-        <div>
-            <label for="confirmPassword">Confirm Password:</label>
-            <input 
-                type="password" 
-                name="confirmPassword" 
-                minlength="6" 
-                required
-            >
-        </div>
-        <div>Password must be atleast <span id="passwordMinNum">6</span> characters long</div>
+                <button type="submit" 
+                    class="w-full my-3 px-3 py-2 bg-lime-500 text-white text-xl rounded-full cursor-pointer
+                    <!-- Animation -->
+                    transition delay-100 duration-300 ease-in-out hover:scale-110 hover:bg-lime-400"
+                    >Register
+                </button>
 
-        <button type="submit">Register</button>
-
-    </form>
+            </form>
+        </div>
+    </section>  
     <!-- Javascript -->
     <script src="assets/js/script.js"></script>
 </body>

@@ -20,6 +20,7 @@
                 id="login_email" 
                 placeholder="email"
                 class="w-80 bg-white border border-gray-300 rounded px-3 py-2"
+                autofocus
                 >
             </div>
             <div class="flex flex-col my-4">
@@ -30,12 +31,18 @@
                 class="bg-white border border-gray-300 rounded px-3 py-2"
                 >
             </div>
-            <button type="submit" class="px-4 py-2 mt-4 bg-lime-500 text-white rounded-full text-xl hover:bg-blue-600">Log In</button>
+            <button 
+                type="submit" 
+                class="w-full px-4 py-2 mt-4 bg-lime-500 text-white rounded-full text-xl cursor-pointer
+                <!-- Animation -->
+                transition delay-100 duration-300 ease-in-out hover:scale-110 hover:bg-lime-400"
+                >Log In
+            </button>
         </form>
 
         <section class="mt-10 flex flex-col items-center">
             <p class="text-white">Don't have an account yet?
-                <a href="register.php" class="font-bold underline m1-1">Sign Up</a>
+                <a href="register.php" class="font-bold underline ml-1">Sign Up</a> <!-- ml is margin left -->
             </p>
         </section>
     </section>

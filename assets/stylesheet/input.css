@@ -1,1 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Freeman&family=Instrument+Sans&family=Noto+Sans&display=swap');
+
 @import "tailwindcss";
+
+body 
+{
+  font-family: "Noto Sans", sans-serif;
+}
+
+h1 
+{
+  font-family: "Freeman";
+}

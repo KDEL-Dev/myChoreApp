@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 28, 2026 at 10:48 PM
+-- Generation Time: May 31, 2026 at 01:52 AM
 -- Server version: 5.7.24
 -- PHP Version: 8.3.1
 
@@ -63,6 +63,15 @@ CREATE TABLE `households` (
   `created_by` int(11) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `households`
+--
+
+INSERT INTO `households` (`household_id`, `name`, `created_by`, `created_at`) VALUES
+(1, '', NULL, '2026-05-31 01:20:36'),
+(2, '', NULL, '2026-05-31 01:22:10'),
+(3, 'Walter\'s Place', NULL, '2026-05-31 01:22:26');
 
 -- --------------------------------------------------------
 
@@ -207,7 +216,7 @@ ALTER TABLE `chore_completions`
 -- AUTO_INCREMENT for table `households`
 --
 ALTER TABLE `households`
-  MODIFY `household_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `household_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `household_invitations`

@@ -6,7 +6,7 @@
 
     <link rel="stylesheet" href="assets/stylesheet/output.css">
 
-    <title>Document</title>
+    <title>Login - Chore Check</title>
 </head>
 <body class=" bg-sky-300">
     <section class="h-full flex justify-center items-center flex-col min-h-screen">
